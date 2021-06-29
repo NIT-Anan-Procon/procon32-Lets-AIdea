@@ -1,0 +1,65 @@
+body {
+  font-size: 4vh;
+  line-height: 6vh;
+  position: fixed;
+  display: grid;
+  width: auto;
+  height: 94vh;
+  margin: 2vh;
+  color: black;
+  border: solid 2px black;
+  grid-template:
+    "title title" 14%
+    "image ai" 36%
+    "image ng" 20%
+    "ex ex" 30%
+    /50% 50%;
+  #title {
+    font-size: 10vh;
+    line-height: 16vh;
+    text-align: center;
+    grid-area: title;
+  }
+  #image {
+    margin: 4vh;
+    margin-right: 0;
+    border: solid 2px black;
+    grid-area: image;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  #ai {
+    line-height: 6vh;
+    margin: 4vh;
+    padding: 6px;
+    border: solid 2px blue;
+    grid-area: ai;
+  }
+  #ng {
+    line-height: 6vh;
+    margin: 4vh;
+    margin-top: 0;
+    padding: 6px;
+    border: solid 2px red;
+    grid-area: ng;
+  }
+  #ex {
+    margin: 4vh;
+    margin-top: 0;
+    padding: 6px;
+    border: solid 2px black;
+    grid-area: ex;
+    textarea {
+      font-size: 40px;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      resize: none;
+      border: none;
+      outline: none;
+    }
+  }
+}
