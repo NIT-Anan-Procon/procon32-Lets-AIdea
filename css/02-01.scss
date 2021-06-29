@@ -3,9 +3,11 @@ body {
   line-height: 6vh;
   position: fixed;
   display: grid;
-  width: auto;
+  width: 96vw;
   height: 94vh;
   margin: 2vh;
+  margin-left: 2vw;
+  margin-right: 2vw;
   color: black;
   border: solid 2px black;
   grid-template:
