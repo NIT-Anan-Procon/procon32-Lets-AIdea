@@ -1,24 +1,5 @@
 body {
-  font-size: 4vh;
-  line-height: 6vh;
-  position: fixed;
-  display: -ms-grid;
-  display: grid;
-  width: 96vw;
-  height: 94vh;
-  margin: 2vh;
-  margin-right: 2vw;
-  margin-left: 2vw;
-  color: black;
-  border: solid 2px black;
   grid-template: "title title title title" 14% "ex ex ex ex" 20% "... image1 image2 ..." 33% "... image3 image4 ..." 33% /10% 40% 40% 10%;
-}
-
-body #title {
-  font-size: 10vh;
-  line-height: 16vh;
-  text-align: center;
-  grid-area: title;
 }
 
 body #ex {
