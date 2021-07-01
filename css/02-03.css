@@ -1,0 +1,26 @@
+body {
+  font-size: 4vh;
+  line-height: 6vh;
+  position: fixed;
+  display: -ms-grid;
+  display: grid;
+  width: 96vw;
+  height: 94vh;
+  margin: 2vh;
+  margin-right: 2vw;
+  margin-left: 2vw;
+  color: black;
+  border: solid 2px black;
+  grid-template: "winner winner winner" 67% "... loser ..." 33% /10% 80% 10%;
+}
+
+body #winner {
+  border: solid 2px black;
+  grid-area: winner;
+}
+
+body #loser {
+  border: solid 2px black;
+  grid-area: loser;
+}
+/*# sourceMappingURL=02-03.css.map */

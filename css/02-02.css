@@ -7,8 +7,8 @@ body {
   width: 96vw;
   height: 94vh;
   margin: 2vh;
-  margin-left: 2vw;
   margin-right: 2vw;
+  margin-left: 2vw;
   color: black;
   border: solid 2px black;
   grid-template: "title title title title" 14% "ex ex ex ex" 20% "... image1 image2 ..." 33% "... image3 image4 ..." 33% /10% 40% 40% 10%;
@@ -34,17 +34,47 @@ body #image1,
 body #image2,
 body #image3,
 body #image4 {
+  position: relative;
   margin: 2vh;
   margin-right: 0;
   border: solid 2px black;
 }
 
-body #image1 img,
-body #image2 img,
-body #image3 img,
-body #image4 img {
+body #image1 button,
+body #image2 button,
+body #image3 button,
+body #image4 button {
+  position: absolute;
+  height: 100%;
+  padding: 0;
+  border: 0;
+}
+
+body #image1 button img,
+body #image2 button img,
+body #image3 button img,
+body #image4 button img {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body #image1 #check,
+body #image2 #check,
+body #image3 #check,
+body #image4 #check {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+body #image1 #check img,
+body #image2 #check img,
+body #image3 #check img,
+body #image4 #check img {
+  width: 26vh;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -63,13 +93,5 @@ body #image3 {
 
 body #image4 {
   grid-area: image4;
-}
-
-body #circle {
-  position: absolute;
-}
-
-body #cross {
-  position: absolute;
 }
 /*# sourceMappingURL=02-02.css.map */
