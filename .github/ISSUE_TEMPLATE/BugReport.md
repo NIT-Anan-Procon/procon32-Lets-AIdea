@@ -1,6 +1,6 @@
 ---
-name: Bug report
-about: Create a report to help us improve
+name: バグレポート
+about: デバッグ中に置きたバグを報告する
 title: ''
 labels: bug
 assignees: ''
