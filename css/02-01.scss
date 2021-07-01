@@ -1,0 +1,65 @@
+body {
+  grid-template:
+    "title title title" 14%
+    "image ai ai" 36%
+    "image ng ng" 20%
+    "ex ex btn" 30%
+    /50% 35% 15%;
+  #image {
+    margin: 4vh;
+    margin-right: 0;
+    border: solid 2px black;
+    grid-area: image;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  #ai {
+    line-height: 6vh;
+    margin: 4vh;
+    padding: 6px;
+    border: solid 2px blue;
+    grid-area: ai;
+  }
+  #ng {
+    line-height: 6vh;
+    margin: 4vh;
+    margin-top: 0;
+    padding: 6px;
+    border: solid 2px red;
+    grid-area: ng;
+  }
+  #ex {
+    margin: 4vh;
+    margin-top: 0;
+    padding: 6px;
+    border: solid 2px black;
+    grid-area: ex;
+    textarea {
+      font-size: 40px;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      resize: none;
+      border: none;
+      outline: none;
+    }
+  }
+  a {
+    margin: 4vh;
+    margin-top: 0;
+    margin-left: 0;
+    text-decoration: none;
+    grid-template: btn;
+    button {
+      font-size: 7vh;
+      line-height: 8vh;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      background-color: aquamarine;
+    }
+  }
+}
