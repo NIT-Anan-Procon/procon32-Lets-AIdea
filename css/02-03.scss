@@ -30,7 +30,7 @@ body {
     border: solid 2px black;
     grid-area: winner;
     grid-template:
-      "icon1 ex_pt1 ans_pt1 sum_pt1" 100%
+      "icon1 sum_pt1 ex_pt1 ans_pt1" 100%
       /25% 25% 25% 25%;
     #icon {
       grid-area: icon1;
@@ -39,6 +39,11 @@ body {
         height: 100%;
         object-fit: contain;
       }
+    }
+    #sum_pt {
+      margin: 1vh;
+      border: solid 2px blue;
+      grid-area: sum_pt1;
     }
     #ex_pt {
       margin: 1vh;
@@ -49,11 +54,6 @@ body {
       margin: 1vh;
       border: solid 2px blue;
       grid-area: ans_pt1;
-    }
-    #sum_pt {
-      margin: 1vh;
-      border: solid 2px blue;
-      grid-area: sum_pt1;
     }
   }
   #loser {
@@ -72,7 +72,7 @@ body {
       grid-area: second;
       max-height: 100%;
       grid-template:
-        "icon2 ex_pt2 ans_pt2 sum_pt2" 100%
+        "icon2 sum_pt2 ex_pt2 ans_pt2" 100%
         /25% 25% 25% 25%;
       #icon {
         grid-area: icon2;
@@ -81,6 +81,11 @@ body {
           height: 100%;
           object-fit: contain;
         }
+      }
+      #sum_pt {
+        margin: 1vh;
+        border: solid 2px blue;
+        grid-area: sum_pt2;
       }
       #ex_pt {
         margin: 1vh;
@@ -92,11 +97,6 @@ body {
         border: solid 2px blue;
         grid-area: ans_pt2;
       }
-      #sum_pt {
-        margin: 1vh;
-        border: solid 2px blue;
-        grid-area: sum_pt2;
-      }
     }
     #third {
       max-height: 100%;
@@ -105,7 +105,7 @@ body {
       border: solid 2px black;
       grid-area: third;
       grid-template:
-        "icon3 ex_pt3 ans_pt3 sum_pt3" 100%
+        "icon3 sum_pt3 ex_pt3 ans_pt3" 100%
         /25% 25% 25% 25%;
       #icon {
         grid-area: icon3;
@@ -114,6 +114,11 @@ body {
           height: 100%;
           object-fit: contain;
         }
+      }
+      #sum_pt {
+        margin: 1vh;
+        border: solid 2px blue;
+        grid-area: sum_pt3;
       }
       #ex_pt {
         margin: 1vh;
@@ -124,11 +129,6 @@ body {
         margin: 1vh;
         border: solid 2px blue;
         grid-area: ans_pt3;
-      }
-      #sum_pt {
-        margin: 1vh;
-        border: solid 2px blue;
-        grid-area: sum_pt3;
       }
     }
   }
