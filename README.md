@@ -1,1 +1,1 @@
-# procon32_Lets_AIdea
+# Procon32 Lets AIdea
