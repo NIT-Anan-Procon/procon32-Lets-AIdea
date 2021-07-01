@@ -22,11 +22,12 @@ body {
     grid-area: title;
   }
   #winner {
-    border: solid 2px black;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
     display: grid;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+
+    border: solid 2px black;
     grid-area: winner;
     grid-template:
       "icon1 ex_pt1 ans_pt1 sum_pt1" 100%
@@ -56,20 +57,20 @@ body {
     }
   }
   #loser {
-    grid-area: loser;
-    margin: 2vh;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
     display: grid;
+    width: 80%;
+    margin: 2vh;
+    margin-right: auto;
+    margin-left: auto;
     grid-area: loser;
     grid-template:
       "second" 50%
       "third" 50%;
     #second {
-      grid-area: second;
-      border: solid 2px black;
       display: grid;
+      border: solid 2px black;
+      grid-area: second;
+      max-height: 100%;
       grid-template:
         "icon2 ex_pt2 ans_pt2 sum_pt2" 100%
         /25% 25% 25% 25%;
@@ -98,10 +99,11 @@ body {
       }
     }
     #third {
-      margin-top: 1vh;
-      grid-area: third;
-      border: solid 2px black;
+      max-height: 100%;
       display: grid;
+      margin-top: 1vh;
+      border: solid 2px black;
+      grid-area: third;
       grid-template:
         "icon3 ex_pt3 ans_pt3 sum_pt3" 100%
         /25% 25% 25% 25%;
