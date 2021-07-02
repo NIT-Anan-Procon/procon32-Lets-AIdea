@@ -21,47 +21,55 @@ body #title {
   grid-area: title;
 }
 
+body #winner,
+body #loser {
+  text-align: center;
+  font-size: 10vh;
+}
+
 body #winner {
   display: -ms-grid;
   display: grid;
   width: 80%;
   margin-right: auto;
   margin-left: auto;
+  line-height: 23vh;
   border: solid 2px black;
   grid-area: winner;
   grid-template: "icon1 sum_pt1 ex_pt1 ans_pt1" 100% /25% 25% 25% 25%;
 }
 
-body #winner #icon {
+body #winner #icon1 {
   grid-area: icon1;
 }
 
-body #winner #icon img {
+body #winner #icon1 img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
 
-body #winner #sum_pt {
+body #winner #sum_pt1 {
   margin: 1vh;
   border: solid 2px blue;
   grid-area: sum_pt1;
 }
 
-body #winner #ex_pt {
+body #winner #ex_pt1 {
   margin: 1vh;
   border: solid 2px blue;
   grid-area: ex_pt1;
 }
 
-body #winner #ans_pt {
+body #winner #ans_pt1 {
   margin: 1vh;
   border: solid 2px blue;
   grid-area: ans_pt1;
 }
 
 body #loser {
+  line-height: 18vh;
   display: -ms-grid;
   display: grid;
   width: 80%;
@@ -81,30 +89,30 @@ body #loser #second {
   grid-template: "icon2 sum_pt2 ex_pt2 ans_pt2" 100% /25% 25% 25% 25%;
 }
 
-body #loser #second #icon {
+body #loser #second #icon2 {
   grid-area: icon2;
 }
 
-body #loser #second #icon img {
+body #loser #second #icon2 img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
 
-body #loser #second #sum_pt {
+body #loser #second #sum_pt2 {
   margin: 1vh;
   border: solid 2px blue;
   grid-area: sum_pt2;
 }
 
-body #loser #second #ex_pt {
+body #loser #second #ex_pt2 {
   margin: 1vh;
   border: solid 2px blue;
   grid-area: ex_pt2;
 }
 
-body #loser #second #ans_pt {
+body #loser #second #ans_pt2 {
   margin: 1vh;
   border: solid 2px blue;
   grid-area: ans_pt2;
@@ -120,30 +128,30 @@ body #loser #third {
   grid-template: "icon3 sum_pt3 ex_pt3 ans_pt3" 100% /25% 25% 25% 25%;
 }
 
-body #loser #third #icon {
+body #loser #third #icon3 {
   grid-area: icon3;
 }
 
-body #loser #third #icon img {
+body #loser #third #icon3 img {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
 }
 
-body #loser #third #sum_pt {
+body #loser #third #sum_pt3 {
   margin: 1vh;
   border: solid 2px blue;
   grid-area: sum_pt3;
 }
 
-body #loser #third #ex_pt {
+body #loser #third #ex_pt3 {
   margin: 1vh;
   border: solid 2px blue;
   grid-area: ex_pt3;
 }
 
-body #loser #third #ans_pt {
+body #loser #third #ans_pt3 {
   margin: 1vh;
   border: solid 2px blue;
   grid-area: ans_pt3;
