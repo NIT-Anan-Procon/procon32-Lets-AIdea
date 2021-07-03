@@ -1,4 +1,4 @@
-let play=4, tx='', count=0, explane=["ライオンが座っている", "ライオンがたたずんでいる",　"ライオンがいる", "犬が草原にいる"];
+let play=4, tx='', cltext='#000000', clback='#f0f8ff', explane=["ライオンが座っている", "ライオンがたたずんでいる",　"ライオンがいる", "犬が草原にいる"];
 
 for(let i=0; i<play; i++){
     tx=tx+'<img src="img/icon_frame.png">';
@@ -9,13 +9,15 @@ for(let i=0; i<play; i++){
 player.innerHTML=tx;
 
 function changeColor(idname){
-    count++;
     let obj = document.getElementById(idname);
-    if(count%2==1){
-        obj.style.color = '#ffffff';
-        obj.style.backgroundColor = '#4169e1';
+    if(cltext==='#000000'){
+        cltext='#ffffff';
+        clback='#4169e1';
+
     }else{
-        obj.style.color = '#000000';
-        obj.style.backgroundColor = '#f0f8ff';
+        cltext='#000000';
+        clback='#f0f8ff';
     }
+    obj.style.color=cltext;
+    obj.style.backgroundColor=clback;
 }
