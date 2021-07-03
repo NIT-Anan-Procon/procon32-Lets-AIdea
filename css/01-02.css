@@ -1,0 +1,73 @@
+body {
+    font-size: 4vh;
+    line-height: 6vh;
+    position: fixed;
+    display: grid;
+    width: 96vw;
+    height: 94vh;
+    margin: 2vh;
+    margin-right: 2vw;
+    margin-left: 2vw;
+    grid-template: 
+    "title player" 15%
+    "img player"   35%
+    "img player"   35%
+    "enter player" 15%
+    /50% 50%
+}
+
+div#title{
+    font-size: 3vh;
+    line-height: 3vh;
+    grid-area: title;
+}
+
+div#img{
+    grid-area: img;
+}
+div#img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+div#player{
+    width: 100%;
+    margin-top: 3vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    grid-area: player;
+}
+
+div#player img{
+    flex-basis: 20%;
+    width: 100%;
+    height: 15%;
+    object-fit: contain;
+}
+
+div#player button{
+    flex-basis: 80%;
+    font-size: 2vw;
+    line-height: 3vh;
+    width: 100%;
+    height: 15%;
+    color: black;
+    background-color: #f0f8ff;
+}
+
+div#enter{
+    margin-top: 4%;
+    margin-left: 25%;
+    grid-area: enter;
+}
+
+div#enter button{
+    font-size: 2vw;
+    line-height: 2vh;
+    width: 50%;
+    height: 70%;
+    color: white;
+    background-color: crimson;
+}

@@ -11,7 +11,10 @@ body {
   margin-left: 2vw;
   color: black;
   border: solid 2px black;
-  grid-template: "title title title" 20% "winner winner winner" 30% "... loser ..." 50% /10% 80% 10%;
+  grid-template: "title title title" 20%
+ "winner winner winner" 30%
+ "... loser ..." 50%
+ /10% 80% 10%;
 }
 
 body #title {
@@ -29,7 +32,8 @@ body #winner {
   display: -ms-grid;
   display: grid;
   grid-area: winner;
-  grid-template: "icon1 ex_pt1 ans_pt1 sum_pt1" 100% /25% 25% 25% 25%;
+  grid-template: "icon1 ex_pt1 ans_pt1 sum_pt1" 100%
+ /25% 25% 25% 25%;
 }
 
 body #winner #icon {
@@ -70,7 +74,8 @@ body #loser {
   display: -ms-grid;
   display: grid;
   grid-area: loser;
-  grid-template: "second" 50% "third" 50%;
+  grid-template: "second" 50%
+ "third" 50%;
 }
 
 body #loser #second {
@@ -78,7 +83,8 @@ body #loser #second {
   border: solid 2px black;
   display: -ms-grid;
   display: grid;
-  grid-template: "icon2 ex_pt2 ans_pt2 sum_pt2" 100% /25% 25% 25% 25%;
+  grid-template: "icon2 ex_pt2 ans_pt2 sum_pt2" 100%
+ /25% 25% 25% 25%;
 }
 
 body #loser #second #icon {
@@ -116,7 +122,8 @@ body #loser #third {
   border: solid 2px black;
   display: -ms-grid;
   display: grid;
-  grid-template: "icon3 ex_pt3 ans_pt3 sum_pt3" 100% /25% 25% 25% 25%;
+  grid-template: "icon3 ex_pt3 ans_pt3 sum_pt3" 100%
+ /25% 25% 25% 25%;
 }
 
 body #loser #third #icon {
