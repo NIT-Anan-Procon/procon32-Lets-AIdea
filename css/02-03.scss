@@ -25,13 +25,24 @@ body {
   #loser {
     text-align: center;
     font-size: 10vh;
+    #sum_pt1,
+    #sum_pt2,
+    #sum_pt3 {
+      color: red;
+    }
+    p {
+      font-size: 4vh;
+      line-height: 5vh;
+      margin: 1vh;
+      text-align: left;
+    }
   }
   #winner {
     display: grid;
     width: 80%;
     margin-right: auto;
     margin-left: auto;
-    line-height: 23vh;
+    line-height: 12vh;
     border: solid 2px black;
     grid-area: winner;
     grid-template:
