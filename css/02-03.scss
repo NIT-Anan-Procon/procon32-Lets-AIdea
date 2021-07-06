@@ -64,13 +64,15 @@ body {
       "grand_prize icon1 sum_pt1 ex_pt1 ans_pt1" 100%
       / auto 25% 25% 25% 25%;
     #grand_prize {
-      grid-area: grand_prize;
       position: relative;
+
+      grid-area: grand_prize;
       img {
-        transform: translate(-15%, -53%);
         position: absolute;
         width: 35vw;
         margin: 0;
+
+        transform: translate(-15%, -53%);
       }
     }
     #icon1 {
@@ -115,11 +117,12 @@ body {
     #second,
     #third {
       .rank {
-        color: red;
         font-size: 3vh;
         top: 0;
         left: 0;
         transform: translate(10%, -10%);
+
+        color: red;
       }
     }
     #second {

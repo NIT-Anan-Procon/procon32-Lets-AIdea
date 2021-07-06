@@ -83,16 +83,16 @@ body #winner {
 }
 
 body #winner #grand_prize {
-  grid-area: grand_prize;
   position: relative;
+  grid-area: grand_prize;
 }
 
 body #winner #grand_prize img {
-  -webkit-transform: translate(-15%, -53%);
-          transform: translate(-15%, -53%);
   position: absolute;
   width: 35vw;
   margin: 0;
+  -webkit-transform: translate(-15%, -53%);
+          transform: translate(-15%, -53%);
 }
 
 body #winner #icon1 {
@@ -143,12 +143,12 @@ body #loser {
 
 body #loser #second .rank,
 body #loser #third .rank {
-  color: red;
   font-size: 3vh;
   top: 0;
   left: 0;
   -webkit-transform: translate(10%, -10%);
           transform: translate(10%, -10%);
+  color: red;
 }
 
 body #loser #second {
