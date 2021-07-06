@@ -23,8 +23,23 @@ body {
   }
   #winner,
   #loser {
-    text-align: center;
     font-size: 10vh;
+    text-align: center;
+    #icon1,
+    #icon2,
+    #icon3 {
+      position: relative;
+      p {
+        font-size: 6vh;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: 0;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+        color: blue;
+      }
+    }
     #sum_pt1,
     #sum_pt2,
     #sum_pt3 {
@@ -38,22 +53,36 @@ body {
     }
   }
   #winner {
+    line-height: 12vh;
     display: grid;
     width: 80%;
     margin-right: auto;
     margin-left: auto;
-    line-height: 12vh;
     border: solid 2px black;
     grid-area: winner;
     grid-template:
-      "icon1 sum_pt1 ex_pt1 ans_pt1" 100%
-      /25% 25% 25% 25%;
+      "grand_prize icon1 sum_pt1 ex_pt1 ans_pt1" 100%
+      / auto 25% 25% 25% 25%;
+    #grand_prize {
+      grid-area: grand_prize;
+      position: relative;
+      img {
+        transform: translate(-15%, -53%);
+        position: absolute;
+        width: 35vw;
+        margin: 0;
+      }
+    }
     #icon1 {
+      text-align: center;
       grid-area: icon1;
       img {
         width: 100%;
         height: 100%;
         object-fit: contain;
+      }
+      p {
+        font-size: 9vh;
       }
     }
     #sum_pt1 {
@@ -83,11 +112,21 @@ body {
     grid-template:
       "second" 50%
       "third" 50%;
+    #second,
+    #third {
+      .rank {
+        color: red;
+        font-size: 3vh;
+        top: 0;
+        left: 0;
+        transform: translate(10%, -10%);
+      }
+    }
     #second {
       display: grid;
+      max-height: 100%;
       border: solid 2px black;
       grid-area: second;
-      max-height: 100%;
       grid-template:
         "icon2 sum_pt2 ex_pt2 ans_pt2" 100%
         /25% 25% 25% 25%;
@@ -116,8 +155,8 @@ body {
       }
     }
     #third {
-      max-height: 100%;
       display: grid;
+      max-height: 100%;
       margin-top: 1vh;
       border: solid 2px black;
       grid-area: third;
