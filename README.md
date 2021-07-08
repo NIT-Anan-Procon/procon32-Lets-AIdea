@@ -6,12 +6,13 @@
 
 - 作業の手順
 
-  1.  issue を立てる
-  2.  branch を作る(github の user 名/issue\_#番号)
-  3.  作業する(commit,push)
-  4.  pull request を立てる
-  5.  レビューで指摘されたら 3 に戻る
-  6.  marge してもらう
+1.  Issue を立てる
+1.  branch を作る
+    1. branch名は `GitHubのユーザー名/issue_issue番号`
+1.  作業する(add, commit, push)
+1.  Pull request を立てる
+1.  レビューで指摘されたら 3. に戻る
+1.  レビューが終わり、 Approve をした人がMergeまで行う
 
 - ファイル管理
 
