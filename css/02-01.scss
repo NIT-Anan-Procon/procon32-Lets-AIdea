@@ -1,27 +1,10 @@
 body {
-  font-size: 4vh;
-  line-height: 6vh;
-  position: fixed;
-  display: grid;
-  width: 96vw;
-  height: 94vh;
-  margin: 2vh;
-  margin-right: 2vw;
-  margin-left: 2vw;
-  color: black;
-  border: solid 2px black;
   grid-template:
     "title title title" 14%
     "image ai ai" 36%
     "image ng ng" 20%
     "ex ex btn" 30%
     /50% 35% 15%;
-  #title {
-    font-size: 10vh;
-    line-height: 16vh;
-    text-align: center;
-    grid-area: title;
-  }
   #image {
     margin: 4vh;
     margin-right: 0;
