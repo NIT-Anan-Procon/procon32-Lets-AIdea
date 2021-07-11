@@ -2,7 +2,7 @@ body {
   grid-template: "title title title title" 14% "ex ex ex ex" 20% "... image1 image2 ..." 33% "... image3 image4 ..." 33% /10% 40% 40% 10%;
 }
 
-body #ex {
+body #another {
   line-height: 6vh;
   margin: 4vh;
   margin-bottom: 0;
@@ -75,4 +75,4 @@ body #image3 {
 body #image4 {
   grid-area: image4;
 }
-/*# sourceMappingURL=02-02.css.map */
+/*# sourceMappingURL=answer.css.map */

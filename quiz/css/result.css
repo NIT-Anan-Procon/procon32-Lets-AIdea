@@ -1,8 +1,5 @@
 body {
-  grid-template: "title title title" 20%
- "winner winner winner" 30%
- "... loser ..." 50%
- /10% 80% 10%;
+  grid-template: "title title title" 20% "winner winner winner" 30% "... loser ..." 50% /10% 80% 10%;
 }
 
 body #title {
@@ -70,8 +67,7 @@ body #winner {
   margin-left: auto;
   border: solid 2px black;
   grid-area: winner;
-  grid-template: "grand_prize icon1 sum_pt1 ex_pt1 ans_pt1" 100%
- / auto 25% 25% 25% 25%;
+  grid-template: "grand_prize icon1 sum_pt1 ex_pt1 ans_pt1" 100% / auto 25% 25% 25% 25%;
 }
 
 body #winner #grand_prize {
@@ -130,8 +126,7 @@ body #loser {
   margin-right: auto;
   margin-left: auto;
   grid-area: loser;
-  grid-template: "second" 50%
- "third" 50%;
+  grid-template: "second" 50% "third" 50%;
 }
 
 body #loser #second .rank,
@@ -150,8 +145,7 @@ body #loser #second {
   max-height: 100%;
   border: solid 2px black;
   grid-area: second;
-  grid-template: "icon2 sum_pt2 ex_pt2 ans_pt2" 100%
- /25% 25% 25% 25%;
+  grid-template: "icon2 sum_pt2 ex_pt2 ans_pt2" 100% /25% 25% 25% 25%;
 }
 
 body #loser #second #icon2 {
@@ -190,8 +184,7 @@ body #loser #third {
   margin-top: 1vh;
   border: solid 2px black;
   grid-area: third;
-  grid-template: "icon3 sum_pt3 ex_pt3 ans_pt3" 100%
- /25% 25% 25% 25%;
+  grid-template: "icon3 sum_pt3 ex_pt3 ans_pt3" 100% /25% 25% 25% 25%;
 }
 
 body #loser #third #icon3 {
@@ -222,4 +215,4 @@ body #loser #third #ans_pt3 {
   border: solid 2px blue;
   grid-area: ans_pt3;
 }
-/*# sourceMappingURL=02-03.css.map */
+/*# sourceMappingURL=result.css.map */
