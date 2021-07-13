@@ -12,14 +12,12 @@ body {
   }
   #winner,
   #loser {
-    font-size: 10vh;
-    text-align: center;
-    #icon1,
-    #icon2,
-    #icon3 {
+    font-weight: bold;
+    font-size: 14vh;
+    .icon {
       position: relative;
       p {
-        font-size: 6vh;
+        font-size: 4vh;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -29,12 +27,21 @@ body {
         color: blue;
       }
     }
-    #sum_pt1,
-    #sum_pt2,
-    #sum_pt3 {
+    .sum_pt {
       color: red;
     }
+    .pt {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 1vh;
+      border: solid 2px blue;
+      position: relative;
+    }
     p {
+      position: absolute;
+      top: 0;
+      left: 0;
       font-size: 4vh;
       line-height: 5vh;
       margin: 1vh;
@@ -42,7 +49,6 @@ body {
     }
   }
   #winner {
-    line-height: 12vh;
     display: grid;
     width: 80%;
     margin-right: auto;
@@ -54,7 +60,6 @@ body {
       / auto 25% 25% 25% 25%;
     #grand_prize {
       position: relative;
-
       grid-area: grand_prize;
       img {
         position: absolute;
@@ -65,7 +70,6 @@ body {
       }
     }
     #icon1 {
-      text-align: center;
       grid-area: icon1;
       img {
         width: 100%;
@@ -77,23 +81,18 @@ body {
       }
     }
     #sum_pt1 {
-      margin: 1vh;
-      border: solid 2px blue;
       grid-area: sum_pt1;
     }
     #ex_pt1 {
-      margin: 1vh;
-      border: solid 2px blue;
       grid-area: ex_pt1;
     }
     #ans_pt1 {
-      margin: 1vh;
-      border: solid 2px blue;
       grid-area: ans_pt1;
     }
   }
   #loser {
-    line-height: 18vh;
+    font-size: 7vh;
+    line-height: 10vh;
     display: grid;
     width: 80%;
     margin: 2vh;
@@ -101,16 +100,18 @@ body {
     margin-left: auto;
     grid-area: loser;
     grid-template:
-      "second" 50%
-      "third" 50%;
+      "second" 33.4%
+      "third" 33.3%
+      "fourth" 33.3%
+      /100%;
     #second,
-    #third {
+    #third,
+    #fourth {
       .rank {
         font-size: 3vh;
         top: 0;
         left: 0;
         transform: translate(10%, -10%);
-
         color: red;
       }
     }
@@ -131,18 +132,12 @@ body {
         }
       }
       #sum_pt2 {
-        margin: 1vh;
-        border: solid 2px blue;
         grid-area: sum_pt2;
       }
       #ex_pt2 {
-        margin: 1vh;
-        border: solid 2px blue;
         grid-area: ex_pt2;
       }
       #ans_pt2 {
-        margin: 1vh;
-        border: solid 2px blue;
         grid-area: ans_pt2;
       }
     }
@@ -164,19 +159,40 @@ body {
         }
       }
       #sum_pt3 {
-        margin: 1vh;
-        border: solid 2px blue;
         grid-area: sum_pt3;
       }
       #ex_pt3 {
-        margin: 1vh;
-        border: solid 2px blue;
         grid-area: ex_pt3;
       }
       #ans_pt3 {
-        margin: 1vh;
-        border: solid 2px blue;
         grid-area: ans_pt3;
+      }
+    }
+    #fourth {
+      display: grid;
+      max-height: 100%;
+      margin-top: 1vh;
+      border: solid 2px black;
+      grid-area: fourth;
+      grid-template:
+        "icon4 sum_pt4 ex_pt4 ans_pt4" 100%
+        /25% 25% 25% 25%;
+      #icon4 {
+        grid-area: icon4;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+      #sum_pt4 {
+        grid-area: sum_pt4;
+      }
+      #ex_pt4 {
+        grid-area: ex_pt4;
+      }
+      #ans_pt4 {
+        grid-area: ans_pt4;
       }
     }
   }
