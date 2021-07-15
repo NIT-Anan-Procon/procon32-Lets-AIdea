@@ -49,7 +49,7 @@ body .image .check {
 }
 
 body .image .check img {
-  width: 26vh;
+  width: 30vh;
   -o-object-fit: cover;
      object-fit: cover;
 }
