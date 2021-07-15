@@ -4,49 +4,13 @@ body {
     "winner winner winner" 30%
     "... loser ..." 50%
     /10% 80% 10%;
+  font-weight: bold;
+  font-size: 14vh;
   #title {
     font-size: 10vh;
     line-height: 16vh;
     text-align: center;
     grid-area: title;
-  }
-  #winner,
-  #loser {
-    font-weight: bold;
-    font-size: 14vh;
-    .icon {
-      position: relative;
-      p {
-        font-size: 4vh;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin: 0;
-        transform: translate(-50%, -50%);
-        white-space: nowrap;
-        color: blue;
-      }
-    }
-    .sum_pt {
-      color: red;
-    }
-    .pt {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 1vh;
-      border: solid 2px blue;
-      position: relative;
-    }
-    p {
-      position: absolute;
-      top: 0;
-      left: 0;
-      font-size: 4vh;
-      line-height: 5vh;
-      margin: 1vh;
-      text-align: left;
-    }
   }
   #winner {
     display: grid;
@@ -56,7 +20,7 @@ body {
     border: solid 2px black;
     grid-area: winner;
     grid-template:
-      "grand_prize icon1 sum_pt1 ex_pt1 ans_pt1" 100%
+      "grand_prize icon sum_pt ex_pt ans_pt" 100%
       / auto 25% 25% 25% 25%;
     #grand_prize {
       position: relative;
@@ -65,135 +29,81 @@ body {
         position: absolute;
         width: 35vw;
         margin: 0;
-
         transform: translate(-15%, -53%);
       }
     }
-    #icon1 {
-      grid-area: icon1;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-      }
-      p {
-        font-size: 9vh;
-      }
-    }
-    #sum_pt1 {
-      grid-area: sum_pt1;
-    }
-    #ex_pt1 {
-      grid-area: ex_pt1;
-    }
-    #ans_pt1 {
-      grid-area: ans_pt1;
+    .icon p {
+      font-size: 8vh;
     }
   }
   #loser {
     font-size: 7vh;
     line-height: 10vh;
-    display: grid;
     width: 80%;
-    margin: 2vh;
     margin-right: auto;
     margin-left: auto;
     grid-area: loser;
-    grid-template:
-      "second" 33.4%
-      "third" 33.3%
-      "fourth" 33.3%
-      /100%;
-    #second,
-    #third,
-    #fourth {
-      .rank {
-        font-size: 3vh;
-        top: 0;
-        left: 0;
-        transform: translate(10%, -10%);
-        color: red;
-      }
-    }
-    #second {
+    .loser {
+      margin: 1vh;
       display: grid;
-      max-height: 100%;
+      max-height: 30%;
       border: solid 2px black;
-      grid-area: second;
       grid-template:
-        "icon2 sum_pt2 ex_pt2 ans_pt2" 100%
+        "icon sum_pt ex_pt ans_pt" 100%
         /25% 25% 25% 25%;
-      #icon2 {
-        grid-area: icon2;
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: contain;
-        }
-      }
-      #sum_pt2 {
-        grid-area: sum_pt2;
-      }
-      #ex_pt2 {
-        grid-area: ex_pt2;
-      }
-      #ans_pt2 {
-        grid-area: ans_pt2;
-      }
     }
-    #third {
-      display: grid;
-      max-height: 100%;
-      margin-top: 1vh;
-      border: solid 2px black;
-      grid-area: third;
-      grid-template:
-        "icon3 sum_pt3 ex_pt3 ans_pt3" 100%
-        /25% 25% 25% 25%;
-      #icon3 {
-        grid-area: icon3;
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: contain;
-        }
-      }
-      #sum_pt3 {
-        grid-area: sum_pt3;
-      }
-      #ex_pt3 {
-        grid-area: ex_pt3;
-      }
-      #ans_pt3 {
-        grid-area: ans_pt3;
-      }
+  }
+  .icon {
+    grid-area: icon;
+    position: relative;
+    p {
+      font-size: 4vh;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: 0;
+      transform: translate(-50%, -50%);
+      white-space: nowrap;
+      color: blue;
     }
-    #fourth {
-      display: grid;
-      max-height: 100%;
-      margin-top: 1vh;
-      border: solid 2px black;
-      grid-area: fourth;
-      grid-template:
-        "icon4 sum_pt4 ex_pt4 ans_pt4" 100%
-        /25% 25% 25% 25%;
-      #icon4 {
-        grid-area: icon4;
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: contain;
-        }
-      }
-      #sum_pt4 {
-        grid-area: sum_pt4;
-      }
-      #ex_pt4 {
-        grid-area: ex_pt4;
-      }
-      #ans_pt4 {
-        grid-area: ans_pt4;
-      }
+    .rank {
+      font-size: 3vh;
+      top: 0;
+      left: 0;
+      transform: translate(10%, -10%);
+      color: red;
     }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 4vh;
+    line-height: 5vh;
+    margin: 1vh;
+    text-align: left;
+  }
+  .pt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1vh;
+    border: solid 2px blue;
+    position: relative;
+  }
+  .sum_pt {
+    color: red;
+    grid-area: sum_pt;
+  }
+  .ex_pt {
+    grid-area: ex_pt;
+  }
+  .ans_pt {
+    grid-area: ans_pt;
   }
 }
