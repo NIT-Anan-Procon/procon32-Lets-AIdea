@@ -14,7 +14,7 @@ body {
   border: solid 2px black;
 }
 
-body #title {
+body .title {
   font-size: 8vh;
   line-height: 14vh;
   text-align: center;

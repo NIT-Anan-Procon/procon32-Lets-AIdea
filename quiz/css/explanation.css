@@ -33,7 +33,7 @@ body #ng {
   grid-area: ng;
 }
 
-body #mine {
+body .mine {
   margin: 4vh;
   margin-top: 0;
   padding: 6px;
@@ -41,7 +41,7 @@ body #mine {
   grid-area: ex;
 }
 
-body #mine textarea {
+body .mine textarea {
   font-size: 40px;
   width: 100%;
   height: 100%;

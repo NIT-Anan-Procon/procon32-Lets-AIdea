@@ -4,7 +4,7 @@ body {
     "winner winner winner" 30%
     "... loser ..." 50%
     /10% 80% 10%;
-  #winner {
+  .winner {
     font-size: 14vh;
 
     display: grid;
@@ -16,7 +16,7 @@ body {
     grid-template:
       "grand_prize icon sum_pt ex_pt ans_pt" 100%
       / auto 25% 25% 25% 25%;
-    #grand_prize {
+    .grand_prize {
       position: relative;
       grid-area: grand_prize;
       img {
@@ -30,7 +30,7 @@ body {
       font-size: 8vh;
     }
   }
-  #loser {
+  .loser_box {
     font-size: 7vh;
     line-height: 10vh;
     width: 80%;

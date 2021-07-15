@@ -2,7 +2,7 @@ body {
   grid-template: "title title title" 20% "winner winner winner" 30% "... loser ..." 50% /10% 80% 10%;
 }
 
-body #winner {
+body .winner {
   font-size: 14vh;
   display: -ms-grid;
   display: grid;
@@ -14,12 +14,12 @@ body #winner {
   grid-template: "grand_prize icon sum_pt ex_pt ans_pt" 100% / auto 25% 25% 25% 25%;
 }
 
-body #winner #grand_prize {
+body .winner .grand_prize {
   position: relative;
   grid-area: grand_prize;
 }
 
-body #winner #grand_prize img {
+body .winner .grand_prize img {
   position: absolute;
   width: 35vw;
   margin: 0;
@@ -27,11 +27,11 @@ body #winner #grand_prize img {
           transform: translate(-15%, -53%);
 }
 
-body #winner .icon p {
+body .winner .icon p {
   font-size: 8vh;
 }
 
-body #loser {
+body .loser_box {
   font-size: 7vh;
   line-height: 10vh;
   width: 80%;
@@ -40,7 +40,7 @@ body #loser {
   grid-area: loser;
 }
 
-body #loser .loser {
+body .loser_box .loser {
   display: -ms-grid;
   display: grid;
   max-height: 14vh;

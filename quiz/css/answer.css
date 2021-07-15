@@ -11,7 +11,7 @@ body #another {
   grid-area: ano;
 }
 
-body #image {
+body .image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,7 +23,7 @@ body #image {
   grid-area: image;
 }
 
-body #image button {
+body .image button {
   position: relative;
   width: 49%;
   height: 48%;
@@ -32,14 +32,14 @@ body #image button {
   border: 0;
 }
 
-body #image button img {
+body .image button img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-body #image .check {
+body .image .check {
   position: absolute;
   top: 0;
   left: 0;
@@ -48,7 +48,7 @@ body #image .check {
   text-align: center;
 }
 
-body #image .check img {
+body .image .check img {
   width: 26vh;
   -o-object-fit: cover;
      object-fit: cover;
