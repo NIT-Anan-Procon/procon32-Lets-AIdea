@@ -1,17 +1,9 @@
 body {
   grid-template: "title title title" 20% "winner winner winner" 30% "... loser ..." 50% /10% 80% 10%;
-  font-weight: bold;
-  font-size: 14vh;
-}
-
-body #title {
-  font-size: 10vh;
-  line-height: 16vh;
-  text-align: center;
-  grid-area: title;
 }
 
 body #winner {
+  font-size: 14vh;
   display: -ms-grid;
   display: grid;
   width: 80%;
@@ -49,17 +41,17 @@ body #loser {
 }
 
 body #loser .loser {
-  margin: 1vh;
   display: -ms-grid;
   display: grid;
-  max-height: 30%;
+  max-height: 14vh;
+  margin: 0.5vh;
   border: solid 2px black;
   grid-template: "icon sum_pt ex_pt ans_pt" 100% /25% 25% 25% 25%;
 }
 
 body .icon {
-  grid-area: icon;
   position: relative;
+  grid-area: icon;
 }
 
 body .icon p {
@@ -91,16 +83,17 @@ body .icon img {
 }
 
 body p {
+  font-size: 4vh;
+  line-height: 5vh;
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 4vh;
-  line-height: 5vh;
   margin: 1vh;
   text-align: left;
 }
 
 body .pt {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -112,7 +105,6 @@ body .pt {
           justify-content: center;
   margin: 1vh;
   border: solid 2px blue;
-  position: relative;
 }
 
 body .sum_pt {

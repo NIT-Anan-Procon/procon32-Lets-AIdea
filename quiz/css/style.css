@@ -1,5 +1,6 @@
 body {
   font-size: 4vh;
+  font-weight: bold;
   line-height: 6vh;
   position: fixed;
   display: -ms-grid;
@@ -14,8 +15,8 @@ body {
 }
 
 body #title {
-  font-size: 10vh;
-  line-height: 16vh;
+  font-size: 8vh;
+  line-height: 14vh;
   text-align: center;
   grid-area: title;
 }
