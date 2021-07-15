@@ -37,8 +37,7 @@ switch (file_name) {
         if (correct == i) eval("image" + i + ".innerHTML+=circle");
         else eval("image" + i + ".innerHTML+=cross");
       }
-      if (user_answer == correct)
-        break;
+      if (user_answer == correct) console("correct");
       window.setTimeout(function () {
         window.location.href = "result.html";
       }, 3000);
@@ -48,75 +47,73 @@ switch (file_name) {
   /* ----------------------------------------- */
 
   case "re":
-    let user_point = [
-      [9, 13, "智乃"],
-      [8, 20, "心愛"],
-      [2, 17, "千夜"],
-      [5, 14, "理世"],
-    ];
-    for (let i = 0; i < user_point.length - 1; i++) {
-      for (let j = i; j < user_point.length - 1; j++) {
-        if (
-          user_point[i][0] + user_point[i][1] <
-          user_point[j + 1][0] + user_point[j + 1][1]
-        ) {
-          let tmp = user_point[i][0];
-          user_point[i][0] = user_point[j + 1][0];
-          user_point[j + 1][0] = tmp;
-          tmp = user_point[i][1];
-          user_point[i][1] = user_point[j + 1][1];
-          user_point[j + 1][1] = tmp;
-          tmp = user_point[i][2];
-          user_point[i][2] = user_point[j + 1][2];
-          user_point[j + 1][2] = tmp;
+    let userASSOC = {
+        user1: { ex: 9, ans: 13, name: "智乃" },
+        user2: { ex: 8, ans: 20, name: "心愛" },
+        user3: { ex: 2, ans: 17, name: "千夜" },
+        user4: { ex: 5, ans: 14, name: "理世" },
+      },
+      user = [[], [], [], []],
+      keyI = 0;
+    let userJSON = JSON.stringify(userASSOC);
+    userASSOC = JSON.parse(userJSON);
+    for (let keyA in userASSOC) {
+      for (let keyB in userASSOC[keyA]) user[keyI].push(userASSOC[keyA][keyB]);
+      keyI++;
+    }
+    for (let i = 0; i < user.length - 1; i++) {
+      for (let j = i; j < user.length - 1; j++) {
+        if (user[i][0] + user[i][1] < user[j + 1][0] + user[j + 1][1]) {
+          let tmp = user[i][0];
+          user[i][0] = user[j + 1][0];
+          user[j + 1][0] = tmp;
+          tmp = user[i][1];
+          user[i][1] = user[j + 1][1];
+          user[j + 1][1] = tmp;
+          tmp = user[i][2];
+          user[i][2] = user[j + 1][2];
+          user[j + 1][2] = tmp;
         }
       }
     }
-    user_point[0].push(1);
-    for (let i = 1; i < user_point.length; i++) {
-      if (
-        user_point[i - 1][0] + user_point[i - 1][1] ==
-        user_point[i][0] + user_point[i][1]
-      )
-        user_point[i].push(user_point[i - 1][3]);
-      else user_point[i].push(i + 1);
-      switch (user_point[i][3]) {
+    user[0].push(1);
+    for (let i = 1; i < user.length; i++) {
+      if (user[i - 1][0] + user[i - 1][1] == user[i][0] + user[i][1])
+        user[i].push(user[i - 1][3]);
+      else user[i].push(i + 1);
+      switch (user[i][3]) {
         case 1:
-          user_point[i][3] += "st";
+          user[i][3] += "st";
           break;
         case 2:
-          user_point[i][3] += "nd";
+          user[i][3] += "nd";
           break;
         case 3:
-          user_point[i][3] += "rd";
+          user[i][3] += "rd";
           break;
         case 4:
-          user_point[i][3] += "th";
+          user[i][3] += "th";
           break;
       }
     }
-    for (let i = 0; i < user_point.length; i++) {
+    for (let i = 0; i < user.length; i++) {
       eval(
-        "icon" +
-          (i + 1) +
-          ".innerHTML += '<p>' + user_point[" +
-          i +
-          "][2] + '</p>';"
+        "icon" + (i + 1) + ".innerHTML += '<p>' + user[" + i + "][2] + '</p>';"
       );
       eval(
         "sum_pt" +
           (i + 1) +
-          ".innerHTML += user_point[" +
+          ".innerHTML += user[" +
           i +
-          "][0] + user_point[" +
+          "][0] + user[" +
           i +
           "][1];"
       );
-      eval("ex_pt" + (i + 1) + ".innerHTML += user_point[" + i + "][0];");
-      eval("ans_pt" + (i + 1) + ".innerHTML += user_point[" + i + "][1];");
+      eval("ex_pt" + (i + 1) + ".innerHTML += user[" + i + "][0];");
+      eval("ans_pt" + (i + 1) + ".innerHTML += user[" + i + "][1];");
     }
-    for (let i = 1; i < user_point.length; i++) {
-      eval("rank" + (i + 1) + ".innerHTML = user_point[" + i + "][3];");
+    for (let i = 1; i < user.length; i++) {
+      eval("rank" + (i + 1) + ".innerHTML = user[" + i + "][3];");
     }
     break;
 }
