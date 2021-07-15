@@ -1,6 +1,6 @@
 try {
-  let ai_ex = "ライオンが座っている",
-    ng_word = ["ライオン", "座っている"];
+  let ai_ex = "草原でライオンが座っている。",
+    ng_word = ["草原", "ライオン"];
   for (let i = 1; i < ng_word.length; i++)
     ng_word[0] = ng_word[0] + " " + ng_word[i];
   ai.innerHTML =
@@ -13,13 +13,16 @@ try {
   /* ----------------------------------------- */
 
   try {
-    let another_ex = "ライオンが座っている";
+    let another_ex = "サバンナで、百獣の王が日向ぼっこをしている。",
+      correct = 1,
+      circle = '<div class="check"><img src="img/circle.png"></div>',
+      cross = '<div class="check"><img src="img/cross.png"></div>';
     another.innerHTML = another_ex;
-    function checkAnswer() {
-      image1.innerHTML += '<div class="check"><img src="img/circle.png"></div>';
-      image2.innerHTML += '<div class="check"><img src="img/cross.png"></div>';
-      image3.innerHTML += '<div class="check"><img src="img/cross.png"></div>';
-      image4.innerHTML += '<div class="check"><img src="img/cross.png"></div>';
+    function checkAnswer(user_answer) {
+      for (let i = 1; i <= 4; i++) {
+        if (correct == i) eval("image" + i + ".innerHTML+=circle");
+        else eval("image" + i + ".innerHTML+=cross");
+      }
       window.setTimeout(function () {
         window.location.href = "result.html";
       }, 3000);
