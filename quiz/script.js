@@ -37,6 +37,8 @@ switch (file_name) {
         if (correct == i) eval("image" + i + ".innerHTML+=circle");
         else eval("image" + i + ".innerHTML+=cross");
       }
+      if (user_answer == correct)
+        break;
       window.setTimeout(function () {
         window.location.href = "result.html";
       }, 3000);
