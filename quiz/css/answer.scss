@@ -1,9 +1,9 @@
 body {
   grid-template:
-    "title title title" 14%
+    "title title title" 10%
     "ano ano ano" 20%
-    "... image ..." 66%
-    /10% 80% 10%;
+    "... image ..." 70%
+    /15% 70% 15%;
   #another {
     line-height: 6vh;
     margin: 4vh;
@@ -15,10 +15,10 @@ body {
   #image {
     display: flex;
     flex-wrap: wrap;
-    grid-area: image;
     margin: 2vh;
     margin-right: 0;
     border: solid 2px black;
+    grid-area: image;
     button {
       position: relative;
       width: 49%;

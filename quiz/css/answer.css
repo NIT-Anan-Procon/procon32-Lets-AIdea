@@ -1,5 +1,5 @@
 body {
-  grid-template: "title title title" 14% "ano ano ano" 20% "... image ..." 66% /10% 80% 10%;
+  grid-template: "title title title" 10% "ano ano ano" 20% "... image ..." 70% /15% 70% 15%;
 }
 
 body #another {
@@ -17,10 +17,10 @@ body #image {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  grid-area: image;
   margin: 2vh;
   margin-right: 0;
   border: solid 2px black;
+  grid-area: image;
 }
 
 body #image button {
