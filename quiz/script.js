@@ -1,23 +1,37 @@
-try {
-  let ai_ex = "草原でライオンが座っている。",
-    ng_word = ["草原", "ライオン"];
-  for (let i = 1; i < ng_word.length; i++)
-    ng_word[0] = ng_word[0] + " " + ng_word[i];
-  ai.innerHTML =
-    '<span style="font-size: 5vh; line-height: 6vh; margin: 1vh; color: blue;">AI説明文</span><br>' +
-    ai_ex;
-  ng.innerHTML =
-    '<span style="font-size: 5vh; line-height: 6vh; margin: 1vh; color: red;">NGワード</span><br>' +
-    ng_word[0];
-} catch (e) {
+let file_name = window.location.href.split("/").pop().slice(0, 2);
+switch (file_name) {
+  case "ex":
+    let ai_ex = "草原でライオンが座っている。",
+      ng_word = ["草原", "ライオン"];
+    for (let i = 1; i < ng_word.length; i++)
+      ng_word[0] = ng_word[0] + " " + ng_word[i];
+    image.innerHTML =
+      "<img src='https://source.unsplash.com/featured/?lion,1'>";
+    ai.innerHTML =
+      '<span style="font-size: 5vh; line-height: 6vh; margin: 1vh; color: blue;">AI説明文</span><br>' +
+      ai_ex;
+    ng.innerHTML =
+      '<span style="font-size: 5vh; line-height: 6vh; margin: 1vh; color: red;">NGワード</span><br>' +
+      ng_word[0];
+    break;
+
   /* ----------------------------------------- */
 
-  try {
+  case "an":
     let another_ex = "サバンナで、百獣の王が日向ぼっこをしている。",
       correct = 1,
       circle = '<div class="check"><img src="img/circle.png"></div>',
-      cross = '<div class="check"><img src="img/cross.png"></div>';
+      cross = '<div class="check"><img src="img/cross.png"></div>',
+      alphabet = ["big", "zoo", "animal", "wild"];
     another.innerHTML = another_ex;
+    for (let i = 1; i <= 4; i++)
+      eval(
+        "image" +
+          i +
+          ".innerHTML = \"<img src='https://source.unsplash.com/featured/?lion," +
+          alphabet[i - 1] +
+          "'>\";"
+      );
     function checkAnswer(user_answer) {
       for (let i = 1; i <= 4; i++) {
         if (correct == i) eval("image" + i + ".innerHTML+=circle");
@@ -27,9 +41,11 @@ try {
         window.location.href = "result.html";
       }, 3000);
     }
-  } catch (e) {
-    /* --------------------------------------- */
+    break;
 
+  /* ----------------------------------------- */
+
+  case "re":
     let user_point = [
       [9, 13, "智乃"],
       [8, 20, "心愛"],
@@ -100,5 +116,5 @@ try {
     for (let i = 1; i < user_point.length; i++) {
       eval("rank" + (i + 1) + ".innerHTML = user_point[" + i + "][3];");
     }
-  }
+    break;
 }
