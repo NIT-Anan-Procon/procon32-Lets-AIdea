@@ -1,30 +1,29 @@
 body {
   grid-template:
-    "title title title title" 14%
-    "ex ex ex ex" 20%
-    "... image1 image2 ..." 33%
-    "... image3 image4 ..." 33%
-    /10% 40% 40% 10%;
+    "title title title" 14%
+    "ano ano ano" 20%
+    "... image ..." 66%
+    /10% 80% 10%;
   #another {
     line-height: 6vh;
     margin: 4vh;
     margin-bottom: 0;
     padding: 6px;
     border: solid 2px black;
-    grid-area: ex;
+    grid-area: ano;
   }
-  #image1,
-  #image2,
-  #image3,
-  #image4 {
-    position: relative;
+  #image {
+    display: flex;
+    flex-wrap: wrap;
+    grid-area: image;
     margin: 2vh;
     margin-right: 0;
     border: solid 2px black;
     button {
-      position: absolute;
-      width: 100%;
-      height: 100%;
+      position: relative;
+      width: 49%;
+      height: 48%;
+      margin: auto;
       padding: 0;
       border: 0;
       img {
@@ -33,8 +32,10 @@ body {
         object-fit: cover;
       }
     }
-    #check {
+    .check {
       position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
       text-align: center;
@@ -43,17 +44,5 @@ body {
         object-fit: cover;
       }
     }
-  }
-  #image1 {
-    grid-area: image1;
-  }
-  #image2 {
-    grid-area: image2;
-  }
-  #image3 {
-    grid-area: image3;
-  }
-  #image4 {
-    grid-area: image4;
   }
 }
