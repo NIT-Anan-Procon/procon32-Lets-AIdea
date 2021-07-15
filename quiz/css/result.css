@@ -9,7 +9,7 @@ body .winner {
   width: 80%;
   margin-right: auto;
   margin-left: auto;
-  border: solid 2px black;
+  border: solid 0.5vh black;
   grid-area: winner;
   grid-template: "grand_prize icon sum_pt ex_pt ans_pt" 100% / auto 25% 25% 25% 25%;
 }
@@ -44,8 +44,8 @@ body .loser_box .loser {
   display: -ms-grid;
   display: grid;
   max-height: 14vh;
-  margin: 0.5vh;
-  border: solid 2px black;
+  border: solid 0.5vh black;
+  border-top: 0;
   grid-template: "icon sum_pt ex_pt ans_pt" 100% /25% 25% 25% 25%;
 }
 
@@ -103,8 +103,9 @@ body .pt {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 1vh;
-  border: solid 2px blue;
+  margin-bottom: 1vh;
+  border-bottom: 1vh ridge gold;
+  border-left: 1vh ridge gold;
 }
 
 body .sum_pt {

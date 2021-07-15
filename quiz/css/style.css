@@ -11,7 +11,7 @@ body {
   margin-right: 2vw;
   margin-left: 2vw;
   color: black;
-  border: solid 2px black;
+  border: solid 0.5vh black;
 }
 
 body .title {
