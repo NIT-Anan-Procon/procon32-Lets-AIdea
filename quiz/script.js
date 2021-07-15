@@ -16,10 +16,10 @@ try {
     let another_ex = "ライオンが座っている";
     another.innerHTML = another_ex;
     function checkAnswer() {
-      image1.innerHTML += '<div id="check"><a><img src="img/circle.png"></div>';
-      image2.innerHTML += '<div id="check"><img src="img/cross.png"></div>';
-      image3.innerHTML += '<div id="check"><img src="img/cross.png"></div>';
-      image4.innerHTML += '<div id="check"><img src="img/cross.png"></div>';
+      image1.innerHTML += '<div class="check"><img src="img/circle.png"></div>';
+      image2.innerHTML += '<div class="check"><img src="img/cross.png"></div>';
+      image3.innerHTML += '<div class="check"><img src="img/cross.png"></div>';
+      image4.innerHTML += '<div class="check"><img src="img/cross.png"></div>';
       window.setTimeout(function () {
         window.location.href = "result.html";
       }, 3000);
@@ -59,10 +59,20 @@ try {
       )
         user_point[i].push(user_point[i - 1][3]);
       else user_point[i].push(i + 1);
-      if (user_point[i][3] == 1) user_point[i][3] += "st";
-      else if (user_point[i][3] == 2) user_point[i][3] += "nd";
-      else if (user_point[i][3] == 3) user_point[i][3] += "rd";
-      else if (user_point[i][3] == 4) user_point[i][3] += "th";
+      switch (user_point[i][3]) {
+        case 1:
+          user_point[i][3] += "st";
+          break;
+        case 2:
+          user_point[i][3] += "nd";
+          break;
+        case 3:
+          user_point[i][3] += "rd";
+          break;
+        case 4:
+          user_point[i][3] += "th";
+          break;
+      }
     }
     for (let i = 0; i < user_point.length; i++) {
       eval(
