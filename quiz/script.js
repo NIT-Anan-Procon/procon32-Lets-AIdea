@@ -1,4 +1,7 @@
 let file_name = window.location.href.split("/").pop().slice(0, 2);
+function run(code) {
+  Function(code)();
+}
 switch (file_name) {
   case "ex":
     let ai_ex = "草原でライオンが座っている。",
@@ -25,7 +28,7 @@ switch (file_name) {
       alphabet = ["big", "zoo", "animal", "wild"];
     another.innerHTML = another_ex;
     for (let i = 1; i <= 4; i++)
-      eval(
+      run(
         "image" +
           i +
           ".innerHTML = \"<img src='https://source.unsplash.com/featured/?lion," +
@@ -34,10 +37,10 @@ switch (file_name) {
       );
     function checkAnswer(user_answer) {
       for (let i = 1; i <= 4; i++) {
-        if (correct == i) eval("image" + i + ".innerHTML+=circle");
-        else eval("image" + i + ".innerHTML+=cross");
+        if (correct == i) run("image" + i + ".innerHTML+='" + circle + "';");
+        else run("image" + i + ".innerHTML+='" + cross + "';");
       }
-      if (user_answer == correct) console("correct");
+      if (user_answer == correct) console.log("correct");
       window.setTimeout(function () {
         window.location.href = "result.html";
       }, 3000);
@@ -97,23 +100,15 @@ switch (file_name) {
       }
     }
     for (let i = 0; i < user.length; i++) {
-      eval(
-        "icon" + (i + 1) + ".innerHTML += '<p>' + user[" + i + "][2] + '</p>';"
+      run("icon" + (i + 1) + ".innerHTML += '<p>" + user[i][2] + "</p>';");
+      run(
+        "sum_pt" + (i + 1) + ".innerHTML += " + (user[i][0] + user[i][1]) + ";"
       );
-      eval(
-        "sum_pt" +
-          (i + 1) +
-          ".innerHTML += user[" +
-          i +
-          "][0] + user[" +
-          i +
-          "][1];"
-      );
-      eval("ex_pt" + (i + 1) + ".innerHTML += user[" + i + "][0];");
-      eval("ans_pt" + (i + 1) + ".innerHTML += user[" + i + "][1];");
+      run("ex_pt" + (i + 1) + ".innerHTML += " + user[i][0] + ";");
+      run("ans_pt" + (i + 1) + ".innerHTML += " + user[i][1] + ";");
     }
     for (let i = 1; i < user.length; i++) {
-      eval("rank" + (i + 1) + ".innerHTML = user[" + i + "][3];");
+      run("rank" + (i + 1) + ".innerHTML = '" + user[i][3] + "';");
     }
     break;
 }
