@@ -1,0 +1,39 @@
+# ================= Description =================
+
+# 下の英文字列を入れると勝手に絵文字に置き換わります
+# 例  :bug:バグを修正 ⇒ 🐛バグを修正
+
+# ================= Main Emoji ==================
+
+# 🚧  :construction: 作業中
+
+# ✨  :sparkles: 新機能を追加
+# 🔨  :hammer:   機能を変更
+
+# 🩹  :adhesive_bandage: 軽微なバグを修正
+# 🚑  :ambulance:        重大なバグを修正
+# ✏️  :pencil2:          タイプミスを修正
+
+# 📝  :memo: ドキュメントを追加、更新
+# 🎨  :art:  デザイン、UIを更新
+
+# ♻️  :recycle:         ソースコードを整理
+# 💬  :speech_balloon: コメントアウトの追加、更新
+
+# 🔥  :fire:         コード、ファイルを削除
+# 🚚  :truck:       ファイルを移動、名前変更
+
+# ================= Sub Emoji ===================
+
+# ⏪  :rewind:                    変更を元に戻す
+# ♿️  :wheelchair:                使いやすさの向上
+# ⚗  :alembic:                    プログラムをテスト
+# 📱  :iphone:                     スマホ対応デザインを更新
+# 🔀  :twisted_rightwards_arrows: ブランチをマージ
+# 💩  :poop:                      酷いコードを追加
+
+# ================= Format ======================
+
+# :emoji: Subject
+#
+# Commit body...

@@ -1,0 +1,105 @@
+body {
+  grid-template:
+    "title title title" 20%
+    "winner winner winner" 30%
+    "... loser ..." 50%
+    /10% 80% 10%;
+  .winner {
+    font-size: 14vh;
+    display: grid;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    border: solid 0.5vh black;
+    grid-area: winner;
+    grid-template:
+      "grand_prize icon sum_pt ex_pt ans_pt" 100%
+      / auto 25% 25% 25% 25%;
+
+    .grand_prize {
+      position: relative;
+      grid-area: grand_prize;
+      img {
+        position: absolute;
+        width: 35vw;
+        margin: 0;
+        transform: translate(-15%, -53%);
+      }
+    }
+    .icon p {
+      font-size: 8vh;
+    }
+  }
+  .loser_box {
+    font-size: 7vh;
+    line-height: 10vh;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    grid-area: loser;
+    .loser {
+      display: grid;
+      max-height: 14vh;
+      border: solid 0.5vh black;
+      border-top: 0;
+      grid-template:
+        "icon sum_pt ex_pt ans_pt" 100%
+        /25% 25% 25% 25%;
+    }
+  }
+  .icon {
+    position: relative;
+    grid-area: icon;
+
+    p {
+      font-size: 4vh;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: 0;
+      transform: translate(-50%, -50%);
+      white-space: nowrap;
+      color: blue;
+    }
+    .rank {
+      font-size: 3vh;
+      top: 0;
+      left: 0;
+      transform: translate(10%, -10%);
+      color: red;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  p {
+    font-size: 4vh;
+    line-height: 5vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 1vh;
+    text-align: left;
+  }
+  .pt {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1vh;
+    border-bottom: 1vh ridge gold;
+    border-left: 1vh ridge gold;
+  }
+  .sum_pt {
+    color: red;
+    grid-area: sum_pt;
+  }
+  .ex_pt {
+    grid-area: ex_pt;
+  }
+  .ans_pt {
+    grid-area: ans_pt;
+  }
+}
