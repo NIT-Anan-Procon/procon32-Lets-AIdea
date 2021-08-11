@@ -1,26 +1,9 @@
 body {
-  font-size: 4vh;
-  line-height: 6vh;
-  position: fixed;
-  display: grid;
-  width: 96vw;
-  height: 94vh;
-  margin: 2vh;
-  margin-right: 2vw;
-  margin-left: 2vw;
-  color: black;
-  border: solid 2px black;
   grid-template:
     "title title title" 20%
     "winner winner winner" 30%
     "... loser ..." 50%
     /10% 80% 10%;
-  #title {
-    font-size: 10vh;
-    line-height: 16vh;
-    text-align: center;
-    grid-area: title;
-  }
   #winner {
     border: solid 2px black;
     margin-left: auto;
