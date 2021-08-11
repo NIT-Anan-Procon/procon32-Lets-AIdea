@@ -19,6 +19,11 @@ for(i=0; i<people.length; i++){
 }
 player.innerHTML=tx;
 
+//処理を書き込む関数
+function letsWrite(cord) {
+    Function(cord)();
+}
+
 /*
 ボタンの状態の処理を行う関数
 ボタンが押されているものをON
@@ -55,7 +60,7 @@ function changeColor(n){
         chack(n);
     }
     for(i=0; i<people.length; i++){
-        eval("document.getElementById('color"+i+"').style.color=clt["+i+"];");
-        eval("document.getElementById('color"+i+"').style.backgroundColor=clb["+i+"];");
+        letsWrite("document.getElementById('color"+i+"').style.color=clt["+i+"];");
+        letsWrite("document.getElementById('color"+i+"').style.backgroundColor=clb["+i+"];");
     }
 }
