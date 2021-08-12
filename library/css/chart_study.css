@@ -5,18 +5,22 @@
     top: 100px;
     overflow-y: scroll;
     border-radius: 2px #999999 solid;
-    display: flex;
+    /* display: flex; */
     background: #89B2D8;
-    ;
+}
+
+.block {
+    display: flex;
+    margin: 15px 40px;
 }
 
 .image {
     height: 280px;
     width: 367px;
-    left: 166px;
-    top: 300px;
+    /* left: 166px;
+    top: 300px; */
     margin-right: 20px;
-    display: flex;
+    /* display: flex; */
     background: #FDB4FF;
 }
 
@@ -31,7 +35,7 @@
     /* left: 512px;
     top: 196px; */
     margin-bottom: 20px;
-    display: flex;
+    /* display: flex; */
     background: #C4C4C4;
 }
 
@@ -40,7 +44,6 @@
     width: 802px;
     /* left: 512px;
     top: 284px; */
-    display: flex;
+    /* display: flex; */
     background: #C4C4C4;
-    ;
 }
