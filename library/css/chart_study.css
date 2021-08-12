@@ -1,0 +1,46 @@
+.container {
+    height: 500px;
+    width: 1304px;
+    left: 68px;
+    top: 100px;
+    overflow-y: scroll;
+    border-radius: 2px #999999 solid;
+    display: flex;
+    background: #89B2D8;
+    ;
+}
+
+.image {
+    height: 280px;
+    width: 367px;
+    left: 166px;
+    top: 300px;
+    margin-right: 20px;
+    display: flex;
+    background: #FDB4FF;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+}
+
+.username {
+    height: 68px;
+    width: 276px;
+    /* left: 512px;
+    top: 196px; */
+    margin-bottom: 20px;
+    display: flex;
+    background: #C4C4C4;
+}
+
+.explanation {
+    height: 192px;
+    width: 802px;
+    /* left: 512px;
+    top: 284px; */
+    display: flex;
+    background: #C4C4C4;
+    ;
+}
