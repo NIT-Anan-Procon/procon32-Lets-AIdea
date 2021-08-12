@@ -1,0 +1,61 @@
+/* 一覧を表示する領域を設定 */
+.container {
+    height: 500px;
+    width: 1304px;
+    left: 68px;
+    top: 100px;
+    overflow-y: scroll;
+    border-radius: 2px #999999 solid;
+    background: #89B2D8;
+}
+
+/* 中央寄せするために設定 */
+.block {
+    display: flex;
+    margin: 15px 40px;
+}
+
+/* 写真を表示する領域を設定 */
+.image {
+    height: 280px;
+    width: 367px;
+    margin-right: 20px;
+    background: #FDB4FF;
+}
+
+/* blockの右側の領域を縦に並べて表示 */
+.text {
+    display: flex;
+    flex-direction: column;
+}
+
+/* textの上側の領域を横に並べて表示 */
+.set {
+    display: flex;
+}
+
+/* ユーザー名を表示する領域を設定 */
+.username {
+    height: 68px;
+    width: 276px;
+    /* display: inline; */
+    margin-bottom: 20px;
+    margin-right: 20px;
+    background: #C4C4C4;
+}
+
+/* NGワードを表示する領域を設定 */
+.taboo {
+    height: 68px;
+    width: 506px;
+    /* display: inline; */
+    margin-bottom: 20px;
+    background: #c93232;
+}
+
+/* 説明文を表示する領域を設定 */
+.explanation {
+    height: 192px;
+    width: 802px;
+    background: #C4C4C4;
+}
