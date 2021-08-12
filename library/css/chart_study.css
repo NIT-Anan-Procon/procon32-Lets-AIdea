@@ -12,7 +12,7 @@
 /* 中央寄せするために設定 */
 .block {
     display: flex;
-    margin: 15px 40px;
+    margin: 60px 40px;
 }
 
 /* 写真を表示する領域を設定 */
